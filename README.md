@@ -1,6 +1,6 @@
 # Hyper App 
 
-> Playing with hyperapp: Functional programming & 1kb framework
+> Playing with hyperapp: Functional programming & 1kb library
 
 
 ```

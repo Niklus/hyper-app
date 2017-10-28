@@ -51,7 +51,7 @@ export default {
     //actions.myModule.logIt()
   },
   
-  // Alternative of thunks
-  updateState(s, a, data){ return data }
+  // Alternative to thunks
+  updateState(s, a, dataObj){ return dataObj }
 }
 
