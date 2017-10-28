@@ -62,7 +62,7 @@ gulp.task('serve', ['dev'], function() {
   
   browserSync.init({ server: 'static', port: 8002 });
 
-  gulp.watch('./src/**/*', ['scripts:dev']);
+  gulp.watch('./src/**/*.js', ['scripts:dev']);
   gulp.watch('./src/styles/**/*.scss', ['styles:dev']);
 
   gulp.watch('./static/**/*').on('change', browserSync.reload);

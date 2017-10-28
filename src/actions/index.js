@@ -49,9 +49,6 @@ export default {
     sw_register()
     window.addEventListener('hashchange', actions.changeRoute)
     //actions.myModule.logIt()
-  },
-  
-  // Alternative to thunks
-  updateState(s, a, dataObj){ return dataObj }
+  }
 }
 
