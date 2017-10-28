@@ -6,8 +6,8 @@ export default ({state, actions}) => {
 
   return route ? (
     <div class="container margin-top">
-      <button class="button teal round" onclick={actions.increament}>
-        increament
+      <button class="button teal round" onclick={actions.increment}>
+        increment
       </button>
       <div>
         <p>value {state.value}</p>

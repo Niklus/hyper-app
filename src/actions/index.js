@@ -4,7 +4,7 @@ import { logCRP } from '../utils/measure_crp'
 export default {
   
   // Simple actions
-  increament(state){
+  increment(state){
     return {
       value: state.value + 1,
       arrStore: state.arrStore.concat([state.value + 1]), // creates a new array
@@ -31,7 +31,7 @@ export default {
     }
   },
   
-  // Routing: changing the state triggers a conditional re-rendering base on route 
+  // Routing: changing the state triggers a conditional re-rendering based on route 
   // Official router is better but cant get it to work :(
   changeRoute(){
     return { route: window.location.hash.slice(1)};
@@ -43,7 +43,7 @@ export default {
     nav.classList.toggle("mobile");
   },
 
-  // Initial Aaction
+  // Initial Action
   onLoad(state, actions) { 
     logCRP()
     sw_register()

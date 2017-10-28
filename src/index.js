@@ -4,6 +4,7 @@ import actions from './actions'
 import state from './state'
 import view from './views'
 import { myModule } from "./modules"
+//import { router } from "@hyperapp/router"
 //import logger from "@hyperapp/logger"
 
 /* APP */
