@@ -8,6 +8,7 @@ export default (state , actions) =>
 	  <Header title={state.name}/>
 	  <View1 state={state} actions={actions}/>
 	  <View2 state={state} actions={actions}/>
+	  <hr/>
 	</div>
 
 
