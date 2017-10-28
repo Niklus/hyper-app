@@ -1,0 +1,30 @@
+{
+  "name": "z_starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp && gulp copy && gulp bundle-sw"
+  },
+  "dependencies": {
+    "@hyperapp/logger": "^0.2.1",
+    "@hyperapp/router": "^0.3.0",
+    "hyperapp": "^0.15.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.4",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "workbox-build": "^2.1.0"
+  }
+}

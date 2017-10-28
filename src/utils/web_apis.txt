@@ -1,0 +1,20 @@
+
+Check out:
+  On tap sign in
+
+  background sync
+
+  image capture api
+
+  image upload ui
+
+  navigator connection type
+
+  web_usb
+
+Links:
+  https://codelabs.developers.google.com/?cat=Web
+  
+  https://developers.google.com/web/fundamentals/
+  
+  https://developers.google.com/web/tools/chrome-user-experience-report/
