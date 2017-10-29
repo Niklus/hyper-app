@@ -1,24 +1,4 @@
-
-const module1 = {
-  
-  state: { 
-    name: 'module1' 
-  },
-
-  actions: {
-  	logState: state => console.log(state)
-  }
-}
-
-const module2 = {
-  
-  state: { 
-    name: 'module2' 
-  },
-
-  actions: {
-    logState: state => console.log(state)
-  }
-}
+import module1 from './module1.js'
+import module2 from './module2.js'
 
 export default { module1, module2 }
