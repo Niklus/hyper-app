@@ -1,16 +1,24 @@
 
-export const myModule = {
+const module1 = {
   
   state: { 
-    value: 0 
+    name: 'module1' 
   },
 
   actions: {
-  	logIt: (state, actions) => {
-  		console.log('Modules State and actions')
-  		console.log(state)
-  		console.log(actions)
-      return {value: 1}
-  	}
+  	logState: state => console.log(state)
   }
 }
+
+const module2 = {
+  
+  state: { 
+    name: 'module2' 
+  },
+
+  actions: {
+    logState: state => console.log(state)
+  }
+}
+
+export default { module1, module2 }

@@ -4,22 +4,22 @@ import { logCRP } from '../utils/measure_crp'
 export default {
   
   // Simple actions
-  increment(state){
+  increment({value, arr, obj}){
     return {
-      value: state.value + 1,
-      arrStore: state.arrStore.concat([state.value + 1]), // creates a new array
-      objStore: { value: state.objStore.value + 1  }// new object. Thou shall not mutate state
+      value: value + 1,
+      arr: arr.concat([value + 1]), // creates a new array
+      obj: { value: obj.value + 1  }// new object. Thou shall not mutate state
     }
   },
 
-  changeName(s, a, evt){
-    const newName = evt.target.value;
-    evt.target.value = "";
-    return { name: newName };   
+  changeName(s, a, { target }){
+    const newName = target.value;
+    target.value = '';
+    if(newName) return { name: newName }  
   },
 
   // Requests 
-  getData(s, actions){ 
+  getData(){ 
     // Thunks return a function instead of a partial state
     // Use for asuync updates
     return update => {
@@ -44,11 +44,10 @@ export default {
   },
 
   // Initial Action
-  onLoad(state, actions) { 
-    logCRP()
+  init(s, { changeRoute }) { 
     sw_register()
-    window.addEventListener('hashchange', actions.changeRoute)
-    //actions.myModule.logIt()
+    window.addEventListener('hashchange', changeRoute)
+    logCRP()
   }
 }
 

@@ -6,14 +6,20 @@ export default ({state, actions}) => {
 
   return route ? (
     <div class="container margin-top">
+      
       <button class="button teal round" onclick={actions.increment}>
         increment
       </button>
+      
       <div>
         <p>value {state.value}</p>
-        <p>array length is {state.arrStore.length}</p>
-        <p>object value is {state.objStore.value}</p>
+        <p>array length is {state.arr.length}</p>
+        <p>object value is {state.obj.value}</p>
       </div>
+      
+      <input class="input border" placeholder="Change Name" 
+      onkeyup={ evt => evt.keyCode == 13 && actions.changeName(evt)}/>
+      
     </div>
   ) : null
 }

@@ -3,8 +3,8 @@
 export default {
   name: 'Hyper App',
   value: 0,
-  objStore : { value: 0 },
-  arrStore: [],
+  obj : { value: 0 },
+  arr: [],
   data: {},
   route : window.location.hash.slice(1) // Having problems with the official router: so we use hash for conditional rendering for now
 }

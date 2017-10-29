@@ -3,18 +3,16 @@ import { app } from 'hyperapp'
 import actions from './actions'
 import state from './state'
 import view from './views'
-import { myModule } from "./modules"
+import modules from "./modules"
 //import { router } from "@hyperapp/router"
-//import logger from "@hyperapp/logger"
+import logger from "@hyperapp/logger"
 
 /* APP */
 
-app({ 
+logger()(app)({ 
 	actions, 
 	state, 
 	view,
-	init(state, actions) { 
-		actions.onLoad(); 
-	},
-	modules: { myModule }
+	modules,
+	init(s, { init }){ init() }
 }, document.getElementById('app'))
