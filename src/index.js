@@ -6,9 +6,9 @@ import view from './views'
 import modules from "./modules"
 //import { router } from "@hyperapp/router"
 import logger from "@hyperapp/logger"
+import logCRP from './utils/measure_crp'
 
 /* APP */
-
 logger()(app)({ 
 	actions, 
 	state, 
@@ -16,3 +16,8 @@ logger()(app)({
 	modules,
 	init(s, { init }){ init() }
 }, document.getElementById('app'))
+
+
+/* CRP */
+logCRP();
+

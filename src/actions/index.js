@@ -1,5 +1,4 @@
 import { sw_register } from '../utils/sw_register'
-import { logCRP } from '../utils/measure_crp'
 
 export default {
   
@@ -45,9 +44,8 @@ export default {
 
   // Initial Action
   init(s, { changeRoute }) { 
-    sw_register()
     window.addEventListener('hashchange', changeRoute)
-    logCRP()
+    sw_register()
   }
 }
 
