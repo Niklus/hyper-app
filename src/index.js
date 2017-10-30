@@ -2,7 +2,7 @@
 import { app } from 'hyperapp'
 import actions from './actions'
 import state from './state'
-import view from './views'
+import view from './view'
 import modules from "./modules"
 //import { router } from "@hyperapp/router"
 //import logger from "@hyperapp/logger"

@@ -1,4 +1,4 @@
-const GIPHY_API_KEY = "dc6zaTOxFJmzC"
+const GIPHY_API_KEY = "vHi0FGOdiNOLuWQ38T64s2dgkR22iZDW"
 
 export default {
   

@@ -1,1 +1,13 @@
 @import "_styles"; 
+
+/* Relative sizing elements */
+img, embed, 
+object, video {
+	max-width: 100%;
+}
+
+/* Tapable elements 48px min*/
+nav a, button {
+	min-width: 48px;
+	min-height: 48px;
+}
