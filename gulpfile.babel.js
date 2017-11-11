@@ -8,10 +8,16 @@ import wbBuild from 'workbox-build';
 import sass from 'gulp-sass';
 import babel from 'rollup-plugin-babel';
 
+
+/**
+ * SCRIPTS
+ */
 // Dev build
 gulp.task('scripts:dev', () => buildScripts(false));
+
 // Production build
 gulp.task('scripts:prod', () => buildScripts(true));
+
 // Build Scripts
 function buildScripts (prod) {
   rollup({
@@ -39,10 +45,16 @@ function buildScripts (prod) {
   })
 }
 
+
+/**
+ * STYLES
+ */
 // Dev build
 gulp.task('styles:dev', () => buildStyles(false));
+
 // Production build
 gulp.task('styles:prod', () => buildStyles(true));
+
 // Build Styles
 function buildStyles (prod) {
   return gulp.src('./src/styles/app.scss')
@@ -50,23 +62,27 @@ function buildStyles (prod) {
     .pipe(gulp.dest('./static/css'));
 }
 
-
+/**
+ * BUILDS
+ */
 // dev builds
 gulp.task('dev', ['scripts:dev','styles:dev']);
+
 // production builds
 gulp.task('prod', ['scripts:prod','styles:prod']);
 
 
 // serve and watch
 gulp.task('serve', ['dev'], function() {
-  
-  browserSync.init({ server: 'static', port: 8002 });
-
+  browserSync.init({ 
+    server: 'static', 
+    port: 8002 
+  });
   gulp.watch('./src/**/*.js', ['scripts:dev']);
   gulp.watch('./src/styles/**/*.scss', ['styles:dev']);
-
   gulp.watch('./static/**/*').on('change', browserSync.reload);
 });
+
 
 // Generate service worker
 gulp.task('bundle-sw', () => {
@@ -81,12 +97,14 @@ gulp.task('bundle-sw', () => {
     });
 })
 
+
 // Copy static files to dist folder
 gulp.task('copy', function(){
   gulp.src([
     'static/**/*'
   ]).pipe(gulp.dest('dist'))
 });
+
 
 // default
 gulp.task('default', ['prod']);

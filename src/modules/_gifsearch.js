@@ -8,7 +8,7 @@ export default {
   },
 
   actions: {
-    getURL: (state, actions, { target }) => {
+    getURL: (state, actions) => ({ target }) => {
       const text = target.value
 
       if (state.isFetching || text === "") {
@@ -25,7 +25,7 @@ export default {
         })
     },
     
-    setURL: (state, actions, url) => ({ url }),
+    setURL: (state, actions) => url => ({ url }),
 
     toggleFetching: state => ({ isFetching: !state.isFetching })
   }

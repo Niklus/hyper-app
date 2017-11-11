@@ -17,17 +17,15 @@ export default {
     route: window.location.hash.slice(1)
   }),
 
-  getData: () => { 
-    return update => {
-      fetch('https://jsonplaceholder.typicode.com/posts/1')
-      .then(res => res.json())
-      .then(data => {
-        update({data: data})
-      })
-    }
+  getData: (s, { updateState }) => { 
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(res => res.json())
+    .then(data => updateState({data: data}))
   },
 
-  init: (s, { changeRoute }) => { 
+  updateState: state => newState => newState,
+
+  start: (s, { changeRoute }) => { 
     window.addEventListener('hashchange', changeRoute)
     sw_register()
   }

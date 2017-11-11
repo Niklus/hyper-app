@@ -10,7 +10,7 @@
   "dependencies": {
     "@hyperapp/logger": "^0.2.1",
     "@hyperapp/router": "^0.3.0",
-    "hyperapp": "^0.15.1"
+    "hyperapp": "^0.16.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

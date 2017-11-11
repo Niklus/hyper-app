@@ -14,5 +14,4 @@ app({
 	state, 
 	view,
 	modules,
-	init(s, { init }){ init() }
-}, document.getElementById('app'))
+}, document.getElementById('app')).start()

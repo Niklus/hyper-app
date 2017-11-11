@@ -6,9 +6,5 @@ export default {
 
   actions: {
   	logState: state => console.log(state)
-  },
-
-  init: (state, actions) => {
-  	actions.logState()
   }
 }
