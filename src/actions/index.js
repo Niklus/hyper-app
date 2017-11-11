@@ -9,7 +9,7 @@ export default {
     obj: { value: obj.value + 1  }
   }),
   
-  changeName: (s, a, { target }) => ({
+  changeName: () => ({ target }) => ({
     name: getName(target)
   }),
 
