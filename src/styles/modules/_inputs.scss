@@ -1,0 +1,29 @@
+.input {
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%
+}
+
+.select {
+    padding: 9px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc
+}
+
+.check,
+.radio {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 6px
+}
+
+.animate-input {
+    transition: width 0.4s ease-in-out
+}
+.animate-input:focus {
+    width: 100%!important
+}

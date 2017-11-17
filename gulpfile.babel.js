@@ -7,6 +7,7 @@ import browserSync from 'browser-sync';
 import wbBuild from 'workbox-build';
 import sass from 'gulp-sass';
 import babel from 'rollup-plugin-babel';
+import purify from 'gulp-purifycss';
 
 
 /**
@@ -57,10 +58,11 @@ gulp.task('styles:prod', () => buildStyles(true));
 
 // Build Styles
 function buildStyles (prod) {
-  return gulp.src('./src/styles/app.scss')
+  return  gulp.src('./src/styles/app.scss')
     .pipe(sass({outputStyle: prod && 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./static/css'));
 }
+
 
 /**
  * BUILDS
@@ -103,6 +105,16 @@ gulp.task('copy', function(){
   gulp.src([
     'static/**/*'
   ]).pipe(gulp.dest('dist'))
+});
+
+// Remove unused css selectors
+gulp.task('purify', function() {
+  return gulp.src('./dist/css/app.css')
+    .pipe(purify(['./dist/js/app.js'], {
+      output: './dist/css/app.css',
+        minify: true,
+        rejected: true // log rejected selectors
+    }))
 });
 
 

@@ -1,0 +1,144 @@
+html {
+    box-sizing: border-box
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0
+}
+
+img {
+    margin-bottom: -5px
+}
+
+a {
+    color: inherit
+}
+
+/* Relative sizing elements */
+img, embed, 
+object, video {
+	max-width: 100%;
+}
+
+/* Tapable elements 48px min*/
+nav a, button {
+	min-width: 48px;
+	min-height: 48px;
+}
+
+.disabled{
+    cursor: not-allowed;
+    opacity: 0.3
+}
+.disabled *,
+:disabled * {
+    pointer-events: none
+}
+
+.center .bar {
+    display: inline-block;
+    width: auto
+}
+
+.block {
+    display: block;
+    width: 100%
+}
+
+.responsive {
+    display: block;
+    overflow-x: auto
+}
+
+.container:after,
+.container:before,
+.panel:after,
+.panel:before,
+.row:after,
+.row:before,
+.row-padding:after,
+.row-padding:before,
+.cell-row:before,
+.cell-row:after,
+.clear:after,
+.clear:before,
+.bar:before,
+.bar:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+/**/
+@media (max-width:600px) {
+    .modal-content {
+        margin: 0 10px;
+        width: auto!important
+    }
+    .modal {
+        padding-top: 30px
+    }
+    .dropdown-hover.mobile .dropdown-content,
+    .dropdown-click.mobile .dropdown-content {
+        position: relative
+    }
+    .hide-small {
+        display: none!important
+    }
+    .mobile {
+        display: block;
+        width: 100%!important
+    }
+    .bar-item.mobile,
+    .dropdown-hover.mobile,
+    .dropdown-click.mobile {
+        text-align: center
+    }
+    .dropdown-hover.mobile,
+    .dropdown-hover.mobile .btn,
+    .dropdown-hover.mobile .button,
+    .dropdown-click.mobile,
+    .dropdown-click.mobile .btn,
+    .dropdown-click.mobile .button {
+        width: 100%
+    }
+}
+
+/**/
+@media (min-width:993px) {
+    .modal-content {
+        width: 900px
+    }
+    .hide-large {
+        display: none!important
+    }
+    .sidebar.collapse {
+        display: block!important
+    }
+}
+
+/**/
+.code {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important
+}
+
+/**/
+.transparent,
+.hover-none:hover {
+    background-color: transparent!important
+}
+.hover-none:hover {
+    box-shadow: none!important
+}
+
+
+
+

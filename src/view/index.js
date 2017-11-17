@@ -10,7 +10,7 @@ export default (state , actions) =>
 	  <View1 state={state} actions={actions}/>
 	  <View2 state={state} actions={actions}/>
 	  <hr/>
-      <Gifsearch state={state} actions={actions}/>
+	  <Gifsearch state={state} actions={actions}/>
 	</div>
 
 

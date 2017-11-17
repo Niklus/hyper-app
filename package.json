@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "gulp serve",
-    "build": "gulp && gulp copy && gulp bundle-sw"
+    "build": "gulp && gulp copy && gulp purify && gulp bundle-sw"
   },
   "dependencies": {
     "@hyperapp/logger": "^0.2.1",
@@ -19,6 +19,7 @@
     "babel-preset-es2015-rollup": "^3.0.0",
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
+    "gulp-purifycss": "^0.2.0",
     "gulp-sass": "^3.1.0",
     "rollup": "^0.50.0",
     "rollup-plugin-babel": "^3.0.2",

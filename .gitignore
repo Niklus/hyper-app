@@ -2,3 +2,4 @@ node_modules
 dist
 static/css
 static/js
+_kit

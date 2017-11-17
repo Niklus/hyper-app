@@ -1,13 +1,18 @@
-@import "_styles"; 
+/* Base */
+@import "base/index";
 
-/* Relative sizing elements */
-img, embed, 
-object, video {
-	max-width: 100%;
-}
+/* Layouts */
+@import "layout/margin";
 
-/* Tapable elements 48px min*/
-nav a, button {
-	min-width: 48px;
-	min-height: 48px;
-}
+/** 
+ * Take what u need. The app should be thin as possible. Every byte counts!
+ * Also makes it easy to purify the css later :)
+*/
+@import "modules/navigation";
+@import "modules/button";
+@import "modules/bgColor";
+@import "modules/typography";
+@import "modules/containers";
+@import "modules/inputs";
+@import "modules/round";
+@import "modules/border";

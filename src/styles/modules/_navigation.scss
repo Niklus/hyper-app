@@ -1,0 +1,76 @@
+.bar {
+    width: 100%;
+    overflow: hidden
+}
+.center .bar {
+    display: inline-block;
+    width: auto
+}
+.bar .bar-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    outline: none;
+    display: block
+}
+.bar .dropdown-hover,
+.bar .dropdown-click {
+    position: static;
+    float: left
+}
+.bar .button {
+    white-space: normal
+}
+.bar-block .bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    outline: none;
+    white-space: normal;
+    float: none
+}
+
+.bar-block.center .bar-item {
+    text-align: center
+}
+
+.bar-block .dropdown-hover,
+.bar-block .dropdown-click {
+    width: 100%
+}
+.bar-block .dropdown-hover .dropdown-content,
+.bar-block .dropdown-click .dropdown-content {
+    min-width: 100%
+}
+.bar-block .dropdown-hover .button,
+.bar-block .dropdown-click .button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 16px
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: fixed!important;
+    z-index: 1;
+    overflow: auto
+}
+
+.main {
+    transition: margin-left .4s
+}
+
+@media (max-width:992px) {
+    .sidebar.collapse {
+        display: none
+    }
+    .main {
+        margin-left: 0!important;
+        margin-right: 0!important
+    }
+}

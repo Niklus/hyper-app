@@ -1,0 +1,30 @@
+.dropdown-click,
+.dropdown-hover {
+    position: relative;
+    display: inline-block;
+    cursor: pointer
+}
+.dropdown-hover:hover .dropdown-content {
+    display: block;
+    z-index: 1
+}
+.dropdown-hover:first-child,
+.dropdown-click:hover {
+    background-color: #ccc;
+    color: #000
+}
+.dropdown-hover:hover > .button:first-child,
+.dropdown-click:hover > .button:first-child {
+    background-color: #ccc;
+    color: #000
+}
+.dropdown-content {
+    cursor: auto;
+    color: #000;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    margin: 0;
+    padding: 0
+}
